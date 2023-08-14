@@ -29,8 +29,8 @@ stock_params = {
 alpha_request = requests.get(url=alpha_endpoint, params=stock_params).json()["Time Series (Daily)"]
 
 date_list = [value for (key, value) in alpha_request.items()]
-yesterday_stock = float(date_list[2]['4. close'])
-before_yesterday_stock = float(date_list[3]['4. close'])
+yesterday_stock = float(date_list[1]['4. close'])
+before_yesterday_stock = float(date_list[2]['4. close'])
 difference = yesterday_stock-before_yesterday_stock
 
 up_down = None
